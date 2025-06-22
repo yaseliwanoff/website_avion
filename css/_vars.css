@@ -1,0 +1,15 @@
+:root {
+    --dark-primary: #2a254b;
+    --primary: #4e4d93;
+    --border-grey: #ebe8f4;
+    --white: #ffffff;
+    --border-dark: #cac6da;
+    --images-dark-chair: #f6f6f6;
+
+    --font-family: "Satosi", sans-serif;
+    --second-family: "Clash Display", sans-serif;
+
+    --gap: 20px;
+    --container-width: 1280px;
+    --container-offset: 15px;
+}
