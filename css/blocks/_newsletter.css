@@ -1,0 +1,23 @@
+.newsletter {
+    padding: 60px;
+    background-color: var(--light-gray);
+}
+
+.newsletter__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 68px 54px;
+    background-color: var(--white);
+}
+
+.newsletter__description {
+    max-width: 470px;
+    margin: 0;
+    margin-bottom: 72px;
+    width: 470px;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    color: var(--dark-primary);
+}

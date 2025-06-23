@@ -1,0 +1,18 @@
+.products__list {
+    display: flex;
+    grid-column: 3 span;
+}
+
+.products__item--big {
+    grid-column: 6 span;
+}
+
+.products {
+    padding-top: 80px;
+    padding-bottom: 56px;
+}
+
+.products__btn {
+    display: table;
+    margin: 0 auto;
+}

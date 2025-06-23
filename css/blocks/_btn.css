@@ -1,0 +1,28 @@
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 32px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+    transition: var(--main-trs);
+    text-decoration: none;
+}
+
+.btn--theme-darker {
+    color: var(--white);
+    background: #2A254B;
+}
+
+.btn--theme-dark {
+    color: var(--white);
+    background: rgba(249, 249, 249, 0.15);
+}
+
+.btn--theme-light {
+    color: var(--dark-primary);
+    background-color: var(--light-gray);
+}
