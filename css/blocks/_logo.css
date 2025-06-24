@@ -5,6 +5,7 @@
 .logo:focus {
     outline: none;
 }
+
 .logo:focus-visible {
     outline: var(--outline);
     outline-offset: var(--outline-offset);
