@@ -1,0 +1,41 @@
+.about__content {
+    display: flex;
+}
+
+.about__info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 72px;
+    padding-bottom: 54px;
+    padding-right: 50px;
+    padding-left: max(15px, calc((100% - 1280px) / 2));
+    width: 50%;
+}
+
+.about__image {
+    width: 50%;
+    display: block;
+    flex-shrink: 0;
+}
+
+.about__title {
+    margin-bottom: 20px;
+    max-width: 514px;
+}
+
+.about__description {
+    margin: 0;
+    max-width: 514px;
+    font-weight: 400;
+    font-size: 16px;
+    color: #505977;
+}
+
+.about__description:not(:last-of-type) {
+    margin-bottom: 30px;
+}
+
+.about__btn {
+    margin-top: auto;
+}
