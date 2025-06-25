@@ -1,0 +1,24 @@
+.notice {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 10px 16px;
+    justify-content: center;
+    gap: 8px;
+    background: var(--dark-primary);
+}
+
+.notice--hidden {
+    display: none;
+}
+
+.notice__close {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.notice__text {
+    color: var(--white);
+}
