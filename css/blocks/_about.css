@@ -1,3 +1,7 @@
+.about {
+    background-color: var(--white);
+}
+
 .about__content {
     display: flex;
 }
@@ -38,4 +42,16 @@
 
 .about__btn {
     margin-top: auto;
+}
+
+.about--reverse {
+    background-color: var(--light-gray);
+}
+
+.about--reverse .about__content {
+    flex-direction: row-reverse;
+}
+
+.about--reverse .about__info {
+    padding-left: 84px;
 }
