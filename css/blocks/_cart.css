@@ -1,0 +1,13 @@
+.cart {
+    padding: 84px 0;
+    background-color: var(--light-gray);
+}
+
+.cart__content {
+    background-color: var(--white);
+}
+
+.cart-grid {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+}
