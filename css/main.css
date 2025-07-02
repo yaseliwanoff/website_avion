@@ -40,3 +40,9 @@
 
 /* cart */
 @import url("./blocks/_cart.css");
+
+/* media */
+@import url("./blocks/_media.css");
+
+/* burger */
+@import url("./blocks/_burger.css");

@@ -1,0 +1,277 @@
+@media (max-width: 1280px) {
+    .product-info__image img {
+        width: 500px;
+    }
+}
+
+@media (max-width: 1024.98px) {
+    .header__bottom {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 100;
+        width: 80%;
+        height: 100vh;
+        overflow-y: auto;
+        visibility: hidden;
+        transform: translateX(-100%);
+        transition: visibility 0.3s ease, transform 0.3s ease;
+    }
+
+    .header__bottom--active {
+        visibility: visible;
+        transform: none;
+    }
+
+    .header__bottom-container {
+        justify-content: flex-start;
+    }
+
+    .nav {
+        padding: 20px 40px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav__list {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero__content {
+        flex-direction: column;
+    }
+
+    .hero__image {
+        display: none;
+    }
+
+    .grid {
+        gap: 20px;
+    }
+
+    .benefits__item {
+        grid-column: 6 span;
+    }
+
+    .products__list {
+        display: grid;
+        gap: 20px;
+    }
+
+    .products__item {
+        grid-column: 6 span;
+    }
+
+    .product__top {
+        width: 100%;
+    }
+
+    .product__image {
+        width: 100%;
+    }
+
+    .footer__column {
+        grid-column: 6 span;
+    }
+
+    .footer__top {
+        row-gap: var(--gap);
+    }
+
+    .footer__form {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .catalog__products {
+        --elems: 2;
+    }
+
+    .product-info__content {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .product-info__text {
+        padding-top: 0;
+    }
+
+    .cart__content {
+        padding: 40px;
+    }
+
+    .cart__row.cart__row--heading .cart__col--quantity {
+        padding-left: 30px;
+    }
+
+    .cart__col--quantity {
+        padding-left: 0;
+    }
+
+    .burger {
+        display: flex !important;
+    }
+}
+
+@media (max-width: 828px) {
+    .newsletter__title  {
+        text-align: center;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .hero .container {
+        padding: 0;
+    }
+
+    .hero__text {
+        padding: 40px 24px;
+    }
+
+    .header {
+        margin-bottom: 20px;
+    }
+
+    .hero {
+        padding: 0;
+    }
+
+    .hero__title {
+        margin-bottom: 80px;
+    }
+
+    .hero__link {
+        margin-top: 32px;
+        order: 3;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .benefits {
+        display: block;
+    }
+
+    .title--small {
+        font-size: 20px;
+        line-height: 140%;
+    }
+
+    .title--centered {
+        text-align: left;
+    }
+
+    .title {
+        max-width: 270px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    :root {
+        --gap: 16px;
+    }
+
+    .benefits__item {
+        grid-column: 4 span;
+    }
+
+    .benefits__subtitle {
+        font-size: 16px;
+        line-height: 140%;
+    }
+
+    .benefits__description {
+        font-size: 14px;
+        line-height: 150%;
+    }
+
+    .title--mb-large {
+        margin-bottom: 25px;
+    }
+
+    .products {
+        padding-top: 48px;
+        padding-bottom: 48px;
+    }
+
+    .title--large {
+        font-size: 20px;
+    }
+
+    .title--mb-small {
+        margin-bottom: 20px;
+    }
+
+    .products__item {
+        grid-column: 2 span;
+    }
+
+    .product__image {
+        height: 201px;
+    }
+
+    .products__list--mobile-slider {
+        display: flex;
+        width: calc(100% + var(--container-offset));
+        overflow-x: auto;
+    }
+
+    .products__item {
+        width: 200px;
+        flex-shrink: 0;
+    }
+
+    .newsletter {
+        padding-inline: 0;
+        display: block;
+    }
+
+    .newsletter__content {
+        padding: 48px 9px;
+        align-items: flex-start;
+    }
+
+    .title--large-xl {
+        font-size: 20px;
+        line-height: 140%;
+    }
+
+    .newsletter__title {
+        text-align: left;
+    }
+
+    .newsletter__description {
+        margin-bottom: 60px;
+        width: 309px;
+        text-align: left;
+        font-size: 14px;
+        line-height: 150%;
+    }
+
+    .form__input {
+        width: 224px;
+    }
+}
+
+@media (max-width: 508px) {
+    .header {
+        margin-top: 20px;
+    }
+
+    .burger {
+        display: flex !important;
+    }
+
+    button[aria-label="Profile"], button[aria-label="Card"] {
+        display: none;
+    }
+
+    .header__list {
+        display: none;
+    }
+}

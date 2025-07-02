@@ -11,6 +11,25 @@
     opacity: 0;
 }
 
+.custom-checkbox__input:focus {
+    outline: none;
+}
+
+.custom-checkbox__input:focus-visible + .custom-checkbox__icon {
+    outline: 2px dashed var(--primary);
+    outline-offset: var(--outline-offset);
+}
+
+@media (any-hover: hover) {
+    .custom-checkbox__input:hover {
+        color: var(--primary);
+    }
+}
+
+.custom-checkbox__input:active {
+    color: var(--border-dark);
+}
+
 .custom-checkbox__icon {
     position: relative;
     flex-shrink: 0;

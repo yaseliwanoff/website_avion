@@ -2,6 +2,10 @@
     text-decoration: none;
 }
 
+.logo img {
+    display: block;
+}
+
 .logo:focus {
     outline: none;
 }
@@ -9,4 +13,49 @@
 .logo:focus-visible {
     outline: var(--outline);
     outline-offset: var(--outline-offset);
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.btn:focus-visible {
+    outline: 2px dashed var(--dark-primary);
+    outline-offset: var(--outline-offset);
+}
+
+@media (any-hover: hover) {
+    .btn--theme-dark:hover {
+        color: var(--dark-primary);
+        background-color: var(--light-gray);
+    }
+}
+
+.btn--theme-dark:active {
+    color: var(--white);
+    background-color: var(--dark-primary);
+}
+
+@media (any-hover: hover) {
+    .btn--theme-light:hover {
+        color: var(--dark-primary);
+        background-color: var(--light-gray);
+    }
+}
+
+.btn--theme-light:active {
+    color: var(--white);
+    background-color: var(--dark-primary);
+}
+
+@media (any-hover: hover) {
+    .btn--theme-darker:hover {
+        color: var(--white);
+        background-color: var(--primary);
+    }
+}
+
+.btn--theme-darker:active {
+    color: var(--dark-primary);
+    background-color: var(--light-gray);
 }

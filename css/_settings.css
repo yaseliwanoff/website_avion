@@ -9,6 +9,11 @@ html, body {
     font-weight: 400;
 }
 
+.page__body {
+    font-family: var(--font-family);
+    min-width: 390px;
+}
+
 .container {
     margin: 0 auto;
     padding-inline: var(--container-offset);

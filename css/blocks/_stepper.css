@@ -15,6 +15,16 @@
     font-size: 16px;
     color: rgb(202, 202, 202);
     user-select: none;
+    transition: var(--main-trs);
+}
+
+.stepper__btn:focus {
+    outline: none;
+}
+
+.stepper__btn:focus-visible + .stepper__input {
+    outline: 2px dashed var(--primary);
+    outline-offset: var(--outline-offset);
 }
 
 .stepper__btn--disabled {
@@ -29,4 +39,14 @@
     font-size: 16px;
     text-align: center;
     color: var(--dark-primary);
+    background-color: inherit;
+    transition: var(--main-trs);
+}
+
+/* .stepper--cart, .stepper__input--cart {
+    background-color: var(--light-gray);
+} */
+
+.stepper--cart {
+    background-color: var(--light-gray);
 }

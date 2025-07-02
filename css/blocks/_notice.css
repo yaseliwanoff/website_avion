@@ -17,6 +17,30 @@
     right: 16px;
     top: 50%;
     transform: translateY(-50%);
+    transition: var(--main-trs);
+}
+
+.notice__close svg {
+    display: block;
+}
+
+.notice__close:focus {
+    outline: none;
+}
+
+.notice__close:focus-visible {
+    outline: 2px dashed var(--primary);
+    outline-offset: var(--outline-offset);
+}
+
+@media (any-hover: hover) {
+    .notice__close:hover {
+        color: var(--primary);
+    }
+}
+
+.notice__close:active {
+    color: var(--border-dark);
 }
 
 .notice__text {

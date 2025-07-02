@@ -1,0 +1,31 @@
+.burger {
+    position: relative;
+    display: none;
+    width: 16px;
+    height: 16px;
+}
+
+.burger__line {
+    position: absolute;
+    left: 50%;
+    width: 12px;
+    height: 1px;
+    background-color: var(--dark-primary);
+    transform: translateX(-50%);
+}
+
+.burger__line:first-child {
+    top: 3px;
+}
+
+.burger__line:nth-child(2) {
+    top: 6px;
+}
+
+.burger__line:nth-child(3) {
+    bottom: 6px;
+}
+
+.burger__line:last-child {
+    bottom: 3px;
+}
