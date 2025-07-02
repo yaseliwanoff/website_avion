@@ -1,65 +1,53 @@
-const stepperEl = document.querySelector(".stepper");
+const steppers = document.querySelectorAll(".stepper");
 
-if (stepperEl) {
-    const stepperBtnMinusEl = document.querySelector(".stepper__btn--minus");
-    const stepperBtnPlusEl = document.querySelector(".stepper__btn--plus");
-    const stepperInputEl = document.querySelector(".stepper__input");
+steppers.forEach((stepper) => {
+    const btnMinus = stepper.querySelector(".stepper__btn--minus");
+    const btnPlus = stepper.querySelector(".stepper__btn--plus");
+    const input = stepper.querySelector(".stepper__input");
 
-    const stepperMinValue = Number(stepperInputEl.getAttribute("min"));
-    const stepperMaxValue = Number(stepperInputEl.getAttribute("max"));
+    const min = Number(input.getAttribute("min")) || 0;
+    const max = Number(input.getAttribute("max")) || Infinity;
 
-    // Reset input value
-    stepperInputEl.addEventListener("change", () => {
-        stepperBtnPlusEl.classList.remove("stepper__btn--disabled");
-        stepperBtnPlusEl.classList.remove("stepper__btn--disabled");
-
-        if (Number(stepperInputEl.value) < stepperMinValue) {
-            stepperInputEl.value = stepperMinValue;
-            stepperBtnMinusEl.classList.add("stepper__btn--disabled");
-        }
-
-        if (Number(stepperInputEl.value) > stepperMaxValue) {
-            stepperInputEl.value = stepperMaxValue;
-            stepperBtnMinusEl.classList.add("stepper__btn--disabled");
-        }
-    })
-
-    // Update input buttons
-    function updateButtons(count) {
-        if (count <= stepperMinValue) {
-            stepperBtnMinusEl.classList.add("stepper__btn--disabled");
-        } else {
-            stepperBtnMinusEl.classList.remove("stepper__btn--disabled");
-        }
-
-        if (count >= stepperMaxValue) {
-            stepperBtnPlusEl.classList.add("stepper__btn--disabled");
-        } else {
-            stepperBtnPlusEl.classList.remove("stepper__btn--disabled");
-        }
+    // Обновить состояние кнопок
+    function updateButtons(value) {
+        btnMinus.classList.toggle("stepper__btn--disabled", value <= min);
+        btnPlus.classList.toggle("stepper__btn--disabled", value >= max);
     }
 
-    updateButtons(Number(stepperInputEl.value));
+    // Обработчик изменения вручную
+    input.addEventListener("change", () => {
+        let value = Number(input.value);
 
-    // Click plus button
-    stepperBtnPlusEl.addEventListener("click", () => {
-        let count = Number(stepperInputEl.value);
+        if (value < min) {
+            value = min;
+        } else if (value > max) {
+            value = max;
+        }
 
-        if (count < stepperMaxValue) {
-            count++;
-            stepperInputEl.value = count;
-            updateButtons(count);
+        input.value = value;
+        updateButtons(value);
+    });
+
+    // Обработчик "+" кнопки
+    btnPlus.addEventListener("click", () => {
+        let value = Number(input.value);
+        if (value < max) {
+            value++;
+            input.value = value;
+            updateButtons(value);
         }
     });
 
-    // Click minus button
-    stepperBtnMinusEl.addEventListener("click", () => {
-        let count = Number(stepperInputEl.value);
-
-        if (count > stepperMinValue) {
-            count--;
-            stepperInputEl.value = count;
-            updateButtons(count);
+    // Обработчик "-" кнопки
+    btnMinus.addEventListener("click", () => {
+        let value = Number(input.value);
+        if (value > min) {
+            value--;
+            input.value = value;
+            updateButtons(value);
         }
     });
-}
+
+    // Первичная инициализация кнопок
+    updateButtons(Number(input.value));
+});
